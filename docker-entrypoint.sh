@@ -6,7 +6,7 @@ if [ -z "$REEVE_API" ]; then
   exit 1
 fi
 
-cd /reeve/src/
+cd /reeve/src/${CONTEXT}
 
 if [ -n "$NPM_LOGIN_REGISTRY" ]; then
   npm config set registry "${NPM_LOGIN_REGISTRY}"

@@ -12,5 +12,7 @@ ENV NPM_LOGIN_TOKEN=
 ENV NPM_LOGIN_USER=
 # NPM_LOGIN_PASSWORD: NPM password to log in with (instead of NPM_LOGIN_TOKEN)
 ENV NPM_LOGIN_PASSWORD=
+# CONTEXT: Context directory (relative to project root)
+ENV CONTEXT=.
 
 ENTRYPOINT ["docker-entrypoint.sh"]
