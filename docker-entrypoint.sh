@@ -12,7 +12,6 @@ if [ -n "$NPM_LOGIN_REGISTRY" ]; then
   npm config set registry "${NPM_LOGIN_REGISTRY}"
 
   NPM_LOGIN_REGISTRY_NAME="$(node -e "console.log(/(?<=https?:\/\/)(.[^/]+)/.exec(process.env.NPM_LOGIN_REGISTRY)[0]);" 2>/dev/null)" || (echo "Parsing NPM login registry failed"; exit 1)
-  export NPM_LOGIN_REGISTRY_NAME
 
   if [ -n "$NPM_LOGIN_TOKEN" ]; then
     npm config set "//$NPM_LOGIN_REGISTRY_NAME/:_authToken" "$NPM_LOGIN_TOKEN"
