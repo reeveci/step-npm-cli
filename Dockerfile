@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-RUN apk add bash git
+RUN apk add --no-cache bash git openssh
 RUN mv /usr/local/bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint-node.sh
 COPY --chmod=755 docker-entrypoint.sh /usr/local/bin/
 
